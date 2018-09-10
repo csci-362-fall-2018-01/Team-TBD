@@ -6,7 +6,7 @@ file=$(readlink -f "$0")
 filepath=$(dirname "$file")
 
 # create the html file
-cat /dev/null > index.html
+ > index.html
 echo "<html>" >> index.html
 echo "<head>" >> index.html
 echo "<title>List of Top Level Directory Elements</title>" >> index.html
