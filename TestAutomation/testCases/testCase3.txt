@@ -1,0 +1,5 @@
+3
+Checks the variable type and returns the type.
+function getVariableTypes(name, type, id)
+[‘type0’, ‘type1’, ‘type2’]
+[‘type0’, ‘type1’, ‘type2’]
