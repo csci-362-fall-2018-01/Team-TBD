@@ -1,0 +1,1 @@
+[‘type0’, ‘type1’, ‘type2’]
