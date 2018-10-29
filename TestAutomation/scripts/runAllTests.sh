@@ -16,7 +16,7 @@ fi
 # load basic html
 while read LINE; do
 	echo "$LINE" >> temp/output.html
-done
+done < "style/style.css"
 
 # loops through all test cases in the directory.
 for filename in testCases/*.txt; do
