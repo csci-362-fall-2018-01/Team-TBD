@@ -7,8 +7,11 @@ if [ "$(ls -A $DIR)" ];
 then
 	echo "Removing all files from temp"
 	rm temp/*
+	echo "Removed files"
 else
 	echo "No files to remove"
+
+fi
 	
 # load basic html
 while read LINE; do
@@ -32,17 +35,15 @@ for filename in testCases/*.txt; do
 	<td>${ARRAY[2]}</td>
 	<td>${ARRAY[3]}</td>
 	<td>${ARRAY[4]}</td>" >> temp/output.html
-	fi
 
 	# running actual test and getting the output
-	cd testCasesExecutables/
-	OUTPUT=$((insert testFile here) ${ARRAY[2]} ${ARRAY[3]})
-	echo "<td>$OUTPUT</td>" >> ../temp/output.html
-	fi
-done
+	#cd testCasesExecutables/
+	#OUTPUT=$((insert testFile here) ${ARRAY[2]} ${ARRAY[3]})
+	#echo "<td>$OUTPUT</td>" >> ../temp/output.html
 	
 # closing table
 echo "</table>" >> temp/output.html
+done
 
 # open in browser
-xdg-open index.html
+xdg-open output.html /dev/null
