@@ -1,15 +1,15 @@
 /**
- * tests/index.js
+ * testAutomation/project/src/index.js
  * created: 30-Oct-2018
  * updated: 30-Oct-2018
- * version: 0.0.1
+ * version: 0.0.2
  */
 
 'use strict'
 
 function safeName () {
 	const varDB = new Blockly.Names('%$@)<.*');
-	assertEquals('SafeName ok.', '%$@)<.*', varDB.safeName_('%$@)<.*'));
+	assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
 }
 
 function commonWordPrefix () {
@@ -29,6 +29,7 @@ function getVariableTypes () {
 	const result = variable_map.getVariableTypes();
 	
 	isEqualArrays(['type1', 'type2', 'type3', ''], result);
+
 	variableMapTest_tearDown();
 }
 
@@ -40,6 +41,7 @@ function getVariableById () {
 	const variable = workspace.getVariableById('id0');
 	
 	assertEquals(variable.name, 'name0');
+
 	workspaceTest_tearDown();
 }
 
@@ -51,7 +53,7 @@ function getVariablesByType () {
 
 	const result = variable_map.getVariablesOfType('type1');
 	
-	isEqualArrays([ var_1, var_2 ], result);
+	isEqualArrays([ var1, var2 ], result);
 
 	variableMapTest_tearDown();
 }
