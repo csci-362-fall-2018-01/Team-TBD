@@ -1,5 +1,5 @@
 1
 Checks if name has special characters and returns the name.
 function safeName(name)
-“%$@ )<.*”
-“%$@ )<.*”
+â€œ%$@ )<.*â€
+â€œ%$@ )<.*â€
