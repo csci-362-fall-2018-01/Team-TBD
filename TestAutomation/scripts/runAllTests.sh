@@ -38,7 +38,7 @@ for filename in testCases/*.txt; do
 
 	# running actual test and getting the output
 	#cd testCasesExecutables/
-	#OUTPUT=$((insert testFile here) ${ARRAY[2]} ${ARRAY[3]})
+	#OUTPUT=$((run_jsunit_tests_in_browser.js) ${ARRAY[2]} ${ARRAY[3]})
 	#echo "<td>$OUTPUT</td>" >> ../temp/output.html
 	
 # closing table
