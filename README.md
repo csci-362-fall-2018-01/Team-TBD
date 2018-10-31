@@ -11,7 +11,17 @@ Contains student-created test materials for developers.google.com/blockly/
 
 ## Short Description
 
-This project is designed to utilize a bash script called "runAllTest.sh"
+This project is designed to utilize a bash script called "runAllTest.sh" that will read through all of the test case files we provide and will run the appropriatly called method with its respective input. Our script will then read the outputs of each test and compare them to the oracle in 
+
+## Requirements
+
+- Ubuntu 14.04
+- The following Google Libraries:
+    - Blockly Library
+        - git clone https://github.com/google/blockly.git
+    - Closure Library
+        - git clone https://github.com/google/closure-library.git
+        - Rename to closure-library and place in same directory as blockly
 
 ## Test Case Formatting
 - Each test case file must follow a specific format which is outlined below
