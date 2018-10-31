@@ -23,14 +23,14 @@
 - File Content:
     - Test Number
     - Requirement
+    - Component
     - Method
     - Input
     - Oracle
-    - Output
-    - Result
-- Example Test file (testCase01.txt)
+- Example Test file (testCase1.txt)
     - 1
     - Checks if name has special characters and returns the name.
+    - Blockly's core
     - function safeName()
-    - “%$@ )<.*”
-    - “%$@ )<.*”
+    - '%$@ )<.*'
+    - '%$@ )<.*'
