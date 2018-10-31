@@ -1,5 +1,6 @@
 4
 Checks if variables are by ID and returns the variable.
-function getVariableById(id)
-‘id0’
-variable ‘id0’
+Blockly's core
+function getVariableById()
+'id0'
+variable 'id0'
