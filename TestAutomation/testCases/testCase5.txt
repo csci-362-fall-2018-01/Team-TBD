@@ -1,5 +1,6 @@
 5
 Checks if variables have same name and returns a number.
-function compareByName(var1, var2)
+Blockly's core
+function compareByName()
 var1, var2 
 -1
