@@ -1,25 +1,27 @@
 /**
  * testAutomation/project/src/index.js
  * created: 30-Oct-2018
- * updated: 30-Oct-2018
- * version: 0.0.2
+ * updated: 5-Nov-2018
+ * version: 0.0.3
  */
 
 'use strict'
 
-function safeName () {
-	const varDB = new Blockly.Names('%$@)<.*');
-	assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
+function test_safeName () {
+	var varDB = new Blockly.Names('window,door');
+	//const varDB = new Blockly.Names('%$@)<.*');
+	//assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
+	assertEquals('SafeName ok.', 'fooBar', varDB.safeName_('fooBar'));
 }
 
-function commonWordPrefix () {
+function test_commonWordPrefix () {
 	const words = [ 'aa', 'abc', 'de', 'gd', 'ax' ]; 
 	const length = Blockly.utils.commonWordPrefix(words);
 	
 	assertEquals('Word prefix', 3, length);
 }
 
-function getVariableTypes () {
+function test_getVariableTypes () {
 	variableMapTest_setUp();
 	
 	variable_map.createVariable('name1', 'type1', 'id1');
@@ -33,7 +35,7 @@ function getVariableTypes () {
 	variableMapTest_tearDown();
 }
 
-function getVariableById () {
+function test_getVariableById () {
 	workspaceTest_setUp();
 	
 	workspace.createVariable('name0', 'type0', 'id0');
@@ -45,7 +47,7 @@ function getVariableById () {
 	workspaceTest_tearDown();
 }
 
-function getVariablesByType () {
+function test_getVariablesByType () {
 	variableMapTest_setUp();
 	
 	const var1 = variable_map.createVariable('name1', 'type1', 'id1');
