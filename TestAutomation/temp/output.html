@@ -1,50 +1,56 @@
-<table>
-<tr>
-<th>Test</th>
-<th>Requirement</th>
-<th>Method</th>
-<th>Input</th>
-<th>Oracle</th>
-<th>Output</th>
-<th>Result</th>
-<tr>
-	<td id="test1">1</td>
-	<td id="test1"><a name=' Checks if name has special characters and returns the name.'></a></td>
-	<td id="test1">safeName(name)</td>
-	<td id="test1">"%$@ )<.*"</td>
-<td id="test1">%$@ )<.*</td>
-<td id="test1">%$@ )<.*</td>
-<td id="test1">insert result here</i></td></tr>
-<tr>
-	<td id="test2">2</td>
-	<td id="test2"><a name='Check if prefix is the same and returns the count.'></a></td>
-	<td id="test2">commonWordPrefix(Array)</td>
-	<td id="test2">[ 'aa', 'abc', 'de', 'gd', 'ax'] </td>
-<td id="test2">3</td>
-<td id="test2">3</td>
-<td id="test2">insert result here</td></tr>
-<tr>
-	<td id="test3">3</td>
-	<td id="test3"><a name='Checks the variable type and returns the type.'></a></td>
-	<td id="test3">getVariableTypes(name, type, id)</td>
-	<td id="test3">['type0', 'type1', 'type2']</td>
-<td id="test3">['type0', 'type1', 'type2']</td>
-<td id="test3">['type0', 'type1', 'type2']</td>
-<td id="test3">insert result here</td></tr>
-<tr>
-	<td id="test4">4</td>
-	<td id="test4"><a name='Checks if variables are by ID and returns the variable.'></a></td>
-	<td id="test4">getVariableById(id)</td>
-	<td id="test4">'id0'</td>
-<td id="test4">id0</td>
-<td id="test4">id0</td>
-<td id="test4">insert result here</td></tr>
-<tr>
-	<td id="test5">5</td>
-	<td id="test5"><a name='Checks if variables have same name and returns a number.'></a></td>
-	<td id="test5">compareByName(var1, var2)</td>
-	<td id="test5">var1, var2 </td>
-<td id="test5">-1</td>
-<td id="test5">-1</td>
-<td id="test5">insert result here</td></tr>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Unit Tests for Blockly - Team TBD</title>
+    <script src='../../../blockly-master/blockly_uncompressed.js'></script>
+    <script>goog.require('goog.testing.jsunit');</script>
+  </head>
+<body>
+    <script src='../project/src/index.js'></script>
+<table border='1px'><tr>
+	<td>1</td>
+	<td>Checks if name has special characters and returns the name.</td>
+	<td>Blockly's core</td>
+	<td>function safeName()</td>
+	<td>'%$@ )<.*'</td>
+	<td>'%$@ )<.*'</td></tr>
+<td></td>
 </table>
+<table border='1px'><tr>
+	<td>2</td>
+	<td>Check if prefix is the same and returns the count.</td>
+	<td>Blockly's core</td>
+	<td>function commonWordPrefix()</td>
+	<td>[ 'aa', 'abc', 'de', 'gd', 'ax']</td>
+	<td>3</td></tr>
+<td></td>
+</table>
+<table border='1px'><tr>
+	<td>3</td>
+	<td>Checks the variable type and returns the type.</td>
+	<td>Blockly's core</td>
+	<td>function getVariableTypes()</td>
+	<td>['type0', 'type1', 'type2']</td>
+	<td>['type0', 'type1', 'type2']</td></tr>
+<td></td>
+</table>
+<table border='1px'><tr>
+	<td>4</td>
+	<td>Checks if variables are by ID and returns the variable.</td>
+	<td>Blockly's core</td>
+	<td>function getVariableById()</td>
+	<td>'id0'</td>
+	<td>variable 'id0'</td></tr>
+<td></td>
+</table>
+<table border='1px'><tr>
+	<td>5</td>
+	<td>Checks if variables have same name and returns a number.</td>
+	<td>Blockly's core</td>
+	<td>function compareByName()</td>
+	<td>var1, var2</td>
+	<td>-1</td></tr>
+<td></td>
+</table>
+</body>
+</html>

@@ -12,6 +12,7 @@ function test_safeName () {
 	//const varDB = new Blockly.Names('%$@)<.*');
 	//assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
 	assertEquals('SafeName ok.', 'fooBar', varDB.safeName_('fooBar'));
+
 }
 
 function test_commonWordPrefix () {
