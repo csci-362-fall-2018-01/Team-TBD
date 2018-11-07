@@ -7,50 +7,52 @@
   </head>
 <body>
     <script src='../project/src/index.js'></script>
-<table border='1px'><tr>
-	<td>1</td>
+<table align='center' border='1px'>
+<tr>
+<th>Test</th>
+<th>Requirement</th>
+<th>Component</th>
+<th>Method</th>
+<th>Input</th>
+<th>Oracle</th>
+<th>Result</th>
+</tr>
+
+	<tr><td>1</td>
 	<td>Checks if name has special characters and returns the name.</td>
 	<td>Blockly's core</td>
 	<td>function safeName()</td>
-	<td>'%$@ )<.*'</td>
-	<td>'%$@ )<.*'</td></tr>
-<td></td>
-</table>
-<table border='1px'><tr>
-	<td>2</td>
+	<td>'fooBar'</td>
+	<td>'fooBar'</td></tr>
+
+	<tr><td>2</td>
 	<td>Check if prefix is the same and returns the count.</td>
 	<td>Blockly's core</td>
 	<td>function commonWordPrefix()</td>
 	<td>[ 'aa', 'abc', 'de', 'gd', 'ax']</td>
 	<td>3</td></tr>
-<td></td>
-</table>
-<table border='1px'><tr>
-	<td>3</td>
+
+	<tr><td>3</td>
 	<td>Checks the variable type and returns the type.</td>
 	<td>Blockly's core</td>
 	<td>function getVariableTypes()</td>
 	<td>['type0', 'type1', 'type2']</td>
 	<td>['type0', 'type1', 'type2']</td></tr>
-<td></td>
-</table>
-<table border='1px'><tr>
-	<td>4</td>
+
+	<tr><td>4</td>
 	<td>Checks if variables are by ID and returns the variable.</td>
 	<td>Blockly's core</td>
 	<td>function getVariableById()</td>
 	<td>'id0'</td>
 	<td>variable 'id0'</td></tr>
-<td></td>
-</table>
-<table border='1px'><tr>
-	<td>5</td>
+
+	<tr><td>5</td>
 	<td>Checks if variables have same name and returns a number.</td>
 	<td>Blockly's core</td>
 	<td>function compareByName()</td>
 	<td>var1, var2</td>
 	<td>-1</td></tr>
-<td></td>
 </table>
+<br><br>
 </body>
 </html>
