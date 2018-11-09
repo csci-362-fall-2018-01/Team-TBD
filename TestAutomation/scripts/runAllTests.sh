@@ -12,11 +12,6 @@ else
 	echo "No files to remove"
 
 fi
-	
-# load basic html
-#while read LINE; do
-#	echo "$LINE" >> temp/output.html
-#done #< "style/style.css"
 
 # create the html file
 echo "<html>
@@ -31,7 +26,7 @@ echo "<html>
 # running tests and getting output
 echo "<body>
     <script src='../project/src/index.js'></script>" >> temp/output.html
-echo "<div class='tablee'><table align='center' border='1px'>
+echo "<div class='tableClass'><table align='center' border='1px'>
 <tr>
 <th>Test</th>
 <th>Requirement</th>
