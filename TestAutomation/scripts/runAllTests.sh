@@ -21,6 +21,7 @@ fi
 # create the html file
 echo "<html>
   <head>
+    <link rel='stylesheet' href='../style/style.css'>
     <meta charset='utf-8'>
     <title>Unit Tests for Blockly - Team TBD</title>
     <script src='../../../blockly-master/blockly_uncompressed.js'></script>
@@ -30,7 +31,7 @@ echo "<html>
 # running tests and getting output
 echo "<body>
     <script src='../project/src/index.js'></script>" >> temp/output.html
-echo "<table align='center' border='1px'>
+echo "<div class='tablee'><table align='center' border='1px'>
 <tr>
 <th>Test</th>
 <th>Requirement</th>
@@ -61,8 +62,7 @@ for filename in testCases/*.txt; do
 done
 
 # closing table
-echo "</table>" >> temp/output.html
-echo "<br><br>" >> temp/output.html
+echo "</table></div>" >> temp/output.html
 echo "</body>" >> temp/output.html
 echo "</html>" >> temp/output.html
 
