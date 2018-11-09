@@ -31,6 +31,6 @@
     - 1
     - Checks if name has special characters and returns the name.
     - Blockly's core
-    - function safeName()
-    - '%$@ )<.*'
-    - '%$@ )<.*'
+    - safeName()
+    - 'fooBar'
+    - 'Is Safe Name'
