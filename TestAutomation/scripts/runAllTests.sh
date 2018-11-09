@@ -27,6 +27,7 @@ echo "<html>
     <script>goog.require('goog.testing.jsunit');</script>
   </head>" >> temp/output.html
 
+# running tests and getting output
 echo "<body>
     <script src='../project/src/index.js'></script>" >> temp/output.html
 echo "<table align='center' border='1px'>
@@ -37,7 +38,6 @@ echo "<table align='center' border='1px'>
 <th>Method</th>
 <th>Input</th>
 <th>Oracle</th>
-<th>Result</th>
 </tr>" >> temp/output.html
 
 # loops through all test cases in the directory.
@@ -58,12 +58,6 @@ for filename in testCases/*.txt; do
 	<td>${ARRAY[3]}</td>
 	<td>${ARRAY[4]}</td>
 	<td>${ARRAY[5]}</td></tr>" >> temp/output.html
-
-	# running actual test and getting output
-	#cd project/src/
-	#OUTPUT=$(index.js ${ARRAY[2]} ${ARRAY[3]})
-	#echo "<td>$OUTPUT</td></tr>" >> ../../temp/output.html
-	
 done
 
 # closing table
