@@ -1,8 +1,8 @@
 /**
  * testAutomation/project/src/index.js
  * created: 30-Oct-2018
- * updated: 5-Nov-2018
- * version: 0.0.3
+ * updated: 9-Nov-2018
+ * version: 0.0.4
  */
 
 'use strict'
@@ -11,7 +11,7 @@ function test_safeName () {
 	var varDB = new Blockly.Names('window,door');
 	//const varDB = new Blockly.Names('%$@)<.*');
 	//assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
-	assertEquals('SafeName ok.', 'fooBar', varDB.safeName_('fooBar'));
+	assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));
 
 }
 
