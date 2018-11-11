@@ -12,17 +12,22 @@ function test_safeName () {
 	//const varDB = new Blockly.Names('%$@)<.*');
 	//assertEquals('Is Safe Name', '%$@)<.*', varDB.safeName_('%$@)<.*'));
 	assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));
+	assertEquals('SafeName special chars.', '_______', varDB.safeName_('%$@)<.*'));
 
 }
 
 function test_commonWordPrefix () {
-	const words = [ 'aa', 'abc', 'de', 'gd', 'ax' ]; 
-	const length = Blockly.utils.commonWordPrefix(words);
+	//const words = [ 'aa', 'abc', 'de', 'gd', 'ax' ]; 
+	//const length = Blockly.utils.commonWordPrefix(words);
 	
+	//assertEquals('Word prefix', 3, length);
+	var length = Blockly.utils.commonWordPrefix('aa,abc,de,gd,ax'.split(','));
 	assertEquals('Word prefix', 3, length);
+	length = Blockly.utils.commonWordPrefix('one,two,three,four,five'.split(','));
+  	assertEquals('No prefix', 0, length);
 }
 
-function test_getVariableTypes () {
+function test_getVariableTypes_Trivial () {
 	variableMapTest_setUp();
 	
 	variable_map.createVariable('name1', 'type1', 'id1');
@@ -36,7 +41,7 @@ function test_getVariableTypes () {
 	variableMapTest_tearDown();
 }
 
-function test_getVariableById () {
+function test_getVariableById_Trivial () {
 	workspaceTest_setUp();
 	
 	workspace.createVariable('name0', 'type0', 'id0');
@@ -48,7 +53,7 @@ function test_getVariableById () {
 	workspaceTest_tearDown();
 }
 
-function test_getVariablesByType () {
+function test_getVariablesOfType_Trivial () {
 	variableMapTest_setUp();
 	
 	const var1 = variable_map.createVariable('name1', 'type1', 'id1');

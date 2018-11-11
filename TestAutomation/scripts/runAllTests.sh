@@ -25,7 +25,8 @@ echo "<html>
 
 # running tests and getting output
 echo "<body>
-    <script src='../project/src/index.js'></script>" >> temp/output.html
+    <script src='../project/src/index.js'></script>
+<script src='../testCases/test.js'></script>" >> temp/output.html
 echo "<div class='tableClass'><table align='center' border='1px'>
 <tr>
 <th>Test</th>
