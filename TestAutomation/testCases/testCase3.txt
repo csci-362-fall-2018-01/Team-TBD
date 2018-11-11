@@ -1,6 +1,6 @@
 3
 Checks the variable type and returns the type.
 Blockly's core
-function getVariableTypes()
+getVariableTypes
 ['type0', 'type1', 'type2']
 ['type0', 'type1', 'type2']
