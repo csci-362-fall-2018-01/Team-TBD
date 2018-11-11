@@ -40,6 +40,6 @@ This project is designed to utilize a bash script called "runAllTest.sh" that wi
     - 1
     - Checks if name has special characters and returns the name.
     - Blockly's core
-    - safeName()
+    - safeName
     - 'fooBar'
     - 'Is Safe Name'
