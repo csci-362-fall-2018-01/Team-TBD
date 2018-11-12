@@ -1,6 +1,6 @@
 4
 Checks if variables are by ID and returns the variable.
 Blockly's core
-function getVariableById()
-'id0'
-variable 'id0'
+getDistinctName
+'Foo.bar'
+'Name distinct #1.'
