@@ -1,0 +1,6 @@
+10
+Checks if name is not found and returns null.
+Blockly's core
+getVariable_NotFound
+'name1
+''
