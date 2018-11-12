@@ -1,6 +1,6 @@
 3
-Checks the variable type and returns the type.
+Checks if there is a certain name and returns a string.
 Blockly's core
-getVariableTypes
-['type0', 'type1', 'type2']
-['type0', 'type1', 'type2']
+getName
+'Foo.bar'
+'Name get #1.'
