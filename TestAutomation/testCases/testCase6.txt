@@ -1,4 +1,4 @@
-7
+6
 Check if prefix is the same and returns a string.
 Blockly's core
 commonWordPrefix
