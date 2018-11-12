@@ -42,9 +42,12 @@ function workspaceTest_tearDown() {
 
 function test_safeName () {
 	var varDB = new Blockly.Names('window,door');
+	//assertEquals('Is Safe Name', 'fooBar', varDB.safeName_(test));
 	assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));
 	//assertEquals('SafeName special chars.', '_______', varDB.safeName_('%$@)<.*'));
 }
+
+//test_safeName ('fooBar'); 
 
 /**************************TEST CASE 2******************************/
 
