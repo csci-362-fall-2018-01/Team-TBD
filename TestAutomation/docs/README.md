@@ -29,7 +29,7 @@
     - Oracle
 - Example Test file (testCase1.txt)
     - 1
-    - Checks if name has special characters and returns the name.
+    - Checks if name is valid and returns a string.
     - Blockly's core
     - safeName
     - 'fooBar'
