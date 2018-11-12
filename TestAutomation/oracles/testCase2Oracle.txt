@@ -1,1 +1,1 @@
-'SafeName empty.'
+'One word.'
