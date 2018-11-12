@@ -20,39 +20,46 @@
 </tr>
 
 	<tr><td>1</td>
-	<td>Checks if name has special characters and returns the name.</td>
+	<td>Checks if name is valid and returns a string.</td>
 	<td>Blockly's core</td>
 	<td>safeName</td>
 	<td>'fooBar'</td>
-	<td>'fooBar'</td></tr>
+	<td>'Is Safe Name'</td></tr>
 
 	<tr><td>2</td>
-	<td>Check if prefix is the same and returns the count.</td>
-	<td>Blockly's core</td>
+	<td>Check if prefix is the same and returns a string.</td>
+	<td>Blockly’s core</td>
 	<td>commonWordPrefix</td>
-	<td>[ 'aa', 'abc', 'de', 'gd', 'ax']</td>
-	<td>3</td></tr>
+	<td>'Xabc de,Yabc de'.split(',')</td>
+	<td>'One word.'</td></tr>
 
 	<tr><td>3</td>
-	<td>Checks the variable type and returns the type.</td>
+	<td>Checks if there is a certain name and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>getVariableTypes</td>
-	<td>['type0', 'type1', 'type2']</td>
-	<td>['type0', 'type1', 'type2']</td></tr>
+	<td>getName</td>
+	<td>'Foo.bar'</td>
+	<td>'Name get #1.'</td></tr>
 
 	<tr><td>4</td>
 	<td>Checks if variables are by ID and returns the variable.</td>
 	<td>Blockly's core</td>
-	<td>function getVariableById()</td>
-	<td>'id0'</td>
-	<td>variable 'id0'</td></tr>
+	<td>getDistinctName</td>
+	<td>'Foo.bar'</td>
+	<td>'Name distinct #1.'</td></tr>
 
 	<tr><td>5</td>
-	<td>Checks if variables have same name and returns a number.</td>
+	<td>Checks if variables have the same name and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>compareByName</td>
-	<td>var1, var2</td>
-	<td>-1</td></tr>
+	<td>nameEquals</td>
+	<td>'Foo.bar'</td>
+	<td>'Names equal.'</td></tr>
+
+	<tr><td>6</td>
+	<td>Check if prefix is the same and returns a string.</td>
+	<td>Blockly's core</td>
+	<td>commonWordPrefix</td>
+	<td>'abc de,abc de Y'.split(',')</td>
+	<td>Expected Outcome: 'Overflow yes'</td></tr>
 </table></div>
 </body>
 </html>
