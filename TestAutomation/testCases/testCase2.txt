@@ -1,6 +1,6 @@
 2
 Checks if name is valid and returns a string.
-Blockly’s core
+Blockly's core
 safeName
 ''
 'SafeName empty.'
