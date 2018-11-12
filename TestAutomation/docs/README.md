@@ -19,7 +19,7 @@
 - Naming:
     - The name of the file must be testCase followed by a number
     - The extension of the file must be .txt
-    - Full file example: testCase1.txt
+    - Full file example: testCase01.txt
 - File Content:
     - Test Number
     - Requirement
