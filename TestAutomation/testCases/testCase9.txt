@@ -1,0 +1,6 @@
+9
+Removes items from an array and returns a string.
+Blockly's core
+arrayRemove
+arr, 2
+'Remove item'
