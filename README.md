@@ -51,7 +51,7 @@ This project is designed to utilize a bash script called "runAllTest.sh" that wi
     - The extension of the file must be .js
     - Full file example: testCase01.js
 - Example Test file (testCase01.js)
-<br><code>/**************************TEST CASE 1******************************/</code><br>
+<br><code>////////////////////TEST CASE 1/////////////////////</code><br>
 <code>function test_safeName () {</code><br>
 <code>var varDB = new Blockly.Names('window,door');</code><br>
 <code>assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));</code><br>
