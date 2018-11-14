@@ -1,0 +1,6 @@
+11
+Checks if a field is appended and returns a string
+Blockly's core
+appendField_simple()
+field1.sourceBlock_
+'appended'
