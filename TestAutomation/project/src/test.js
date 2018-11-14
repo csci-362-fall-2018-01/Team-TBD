@@ -121,12 +121,9 @@ function test_appendField_simple() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Actual Tests
+  // Tests
   input.appendField(field1, 'first');
-  assertEquals(1, input.fieldRow.length);
-  assertEquals(field1, input.fieldRow[0]);
-  assertEquals('first', input.fieldRow[0].name);
-  assertEquals(block, field1.sourceBlock_);
+  assertEquals('appended', block, field1.sourceBlock_);
 }
 function test_appendField_string() {
   var ws = new Blockly.Workspace();
@@ -137,10 +134,39 @@ function test_appendField_string() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Actual Tests
+  // Tests
   input.appendField(labelText, 'name');
-  assertEquals(1, input.fieldRow.length);
-  assertEquals(Blockly.FieldLabel, input.fieldRow[0].constructor);
-  assertEquals(labelText, input.fieldRow[0].getValue());
-  assertEquals('name', input.fieldRow[0].name);
+  assertEquals('string is appended', 'name', input.fieldRow[0].name);
+}
+function test_appendField_prefix() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var prefix = new Blockly.FieldLabel('prefix');
+  var field = new Blockly.FieldLabel('field');
+  field.prefixField = prefix;
+
+  // Preconditions
+  assertEquals(0, input.fieldRow.length);
+
+  // Tests
+  input.appendField(field);
+  //assertEquals(2, input.fieldRow.length);
+  assertEquals('appended', prefix, input.fieldRow[0]);
+  //assertEquals('appended', field, input.fieldRow[1]);
+}
+function test_appendField_suffix() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var suffix = new Blockly.FieldLabel('suffix');
+  var field = new Blockly.FieldLabel('field');
+  field.suffixField = suffix;
+
+  // Preconditions
+  assertEquals(0, input.fieldRow.length);
+
+  // Test
+  input.appendField(field);
+  assertEquals('appended', suffix, input.fieldRow[1]);
 }
