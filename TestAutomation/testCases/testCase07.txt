@@ -1,6 +1,6 @@
 7
 Checks the length of a string and returns a string.
 Blockly's core
-shortestStringLength
+shortestStringLength()
 []
 'Empty list'

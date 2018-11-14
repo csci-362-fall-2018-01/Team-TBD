@@ -7,8 +7,7 @@
     <script>goog.require('goog.testing.jsunit');</script>
   </head>
 <body>
-    <script src='../project/src/index.js'></script>
-<script src='../testCases/test.js'></script>
+    <script src='../project/src/test.js'></script>
 <div class='tableClass'><table align='center' border='1px'>
 <tr>
 <th>Test</th>
@@ -22,71 +21,71 @@
 	<tr><td>1</td>
 	<td>Checks if name is valid and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>safeName</td>
+	<td>safeName()</td>
 	<td>'fooBar'</td>
 	<td>'Is Safe Name'</td></tr>
 
 	<tr><td>2</td>
 	<td>Check if prefix is the same and returns a string.</td>
 	<td>Blockly’s core</td>
-	<td>commonWordPrefix</td>
+	<td>commonWordPrefix()</td>
 	<td>'Xabc de,Yabc de'.split(',')</td>
 	<td>'One word.'</td></tr>
 
 	<tr><td>3</td>
 	<td>Checks if there is a certain name and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>getName</td>
+	<td>getName()</td>
 	<td>'Foo.bar'</td>
 	<td>'Name get #1.'</td></tr>
 
 	<tr><td>4</td>
 	<td>Checks if variables are by ID and returns the variable.</td>
 	<td>Blockly's core</td>
-	<td>getDistinctName</td>
+	<td>getDistinctName()</td>
 	<td>'Foo.bar'</td>
 	<td>'Name distinct #1.'</td></tr>
 
 	<tr><td>5</td>
 	<td>Checks if variables have the same name and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>nameEquals</td>
+	<td>nameEquals()</td>
 	<td>'Foo.bar'</td>
 	<td>'Names equal.'</td></tr>
 
 	<tr><td>6</td>
 	<td>Check if prefix is the same and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>commonWordPrefix</td>
+	<td>commonWordPrefix()</td>
 	<td>'abc de,abc de Y'.split(',')</td>
-	<td>Expected Outcome: 'Overflow yes'</td></tr>
+	<td>'Overflow yes'</td></tr>
 
 	<tr><td>7</td>
 	<td>Checks the length of a string and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>shortestStringLength</td>
+	<td>shortestStringLength()</td>
 	<td>[]</td>
 	<td>'Empty list'</td></tr>
 
 	<tr><td>8</td>
 	<td>Checks what a variable starts with and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>startsWith</td>
+	<td>startsWith()</td>
 	<td>'123', '2'</td>
 	<td>'Does not start with'</td></tr>
 
 	<tr><td>9</td>
 	<td>Removes items from an array and returns a string.</td>
 	<td>Blockly's core</td>
-	<td>arrayRemove</td>
+	<td>arrayRemove()</td>
 	<td>arr, 2</td>
 	<td>'Remove item'</td></tr>
 
 	<tr><td>10</td>
 	<td>Checks if name is not found and returns null.</td>
 	<td>Blockly's core</td>
-	<td>getVariable_NotFound</td>
-	<td>'name1</td>
+	<td>getVariable_NotFound()</td>
+	<td>'name1'</td>
 	<td>''</td></tr>
 </table></div>
 </body>

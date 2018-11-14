@@ -1,6 +1,6 @@
 3
 Checks if there is a certain name and returns a string.
 Blockly's core
-getName
+getName()
 'Foo.bar'
 'Name get #1.'

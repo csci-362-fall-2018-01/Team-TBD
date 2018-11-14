@@ -1,6 +1,6 @@
 2
 Check if prefix is the same and returns a string.
 Blockly’s core
-commonWordPrefix
+commonWordPrefix()
 'Xabc de,Yabc de'.split(',')
 'One word.'

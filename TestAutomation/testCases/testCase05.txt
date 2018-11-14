@@ -1,6 +1,6 @@
 5
 Checks if variables have the same name and returns a string.
 Blockly's core
-nameEquals
+nameEquals()
 'Foo.bar'
 'Names equal.'

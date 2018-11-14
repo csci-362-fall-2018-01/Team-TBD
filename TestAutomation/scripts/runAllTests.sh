@@ -13,6 +13,9 @@ else
 
 fi
 
+cat project/src/index.js > project/src/test.js
+cat testCaseExecutables/*.js >> project/src/test.js
+
 # create the html file
 echo "<html>
   <head>
@@ -25,8 +28,7 @@ echo "<html>
 
 # running tests and getting output
 echo "<body>
-    <script src='../project/src/index.js'></script>
-<script src='../testCases/test.js'></script>" >> temp/output.html
+    <script src='../project/src/test.js'></script>" >> temp/output.html
 echo "<div class='tableClass'><table align='center' border='1px'>
 <tr>
 <th>Test</th>

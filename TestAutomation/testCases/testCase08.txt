@@ -1,6 +1,6 @@
 8
 Checks what a variable starts with and returns a string.
 Blockly's core
-startsWith
+startsWith()
 '123', '2'
 'Does not start with'
