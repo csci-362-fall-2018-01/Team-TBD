@@ -3,6 +3,7 @@
 - The following Google Libraries:
     - Blockly Library
         - git clone https://github.com/google/blockly.git
+        - Rename to <i>blockly-master</i>
     - Closure Library 
         - git clone https://github.com/google/closure-library.git
         - Rename to <i>closure-library</i> and place in same directory as blockly
