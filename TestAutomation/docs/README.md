@@ -32,7 +32,7 @@
     - 1
     - Checks if name is valid and returns a string.
     - Blockly's core
-    - safeName
+    - safeName()
     - 'fooBar'
     - 'Is Safe Name'
 - Each test case javascript file must follow a specific format which is outlined below:
