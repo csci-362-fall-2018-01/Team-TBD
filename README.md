@@ -19,9 +19,10 @@ This project is designed to utilize a bash script called "runAllTest.sh" that wi
 - The following Google Libraries:
     - Blockly Library
         - git clone https://github.com/google/blockly.git
+        - Rename to <i>blockly-master</i>
     - Closure Library
         - git clone https://github.com/google/closure-library.git
-        - Rename to closure-library and place in same directory as blockly
+        - Rename to <i>closure-library</i> and place in same directory as blockly
 
 ## Test Case Formatting
 
