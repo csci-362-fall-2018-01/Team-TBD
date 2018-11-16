@@ -1,3 +1,6 @@
+
+/**************************TEST CASE 12******************************/
+
 function test_appendField_string() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);

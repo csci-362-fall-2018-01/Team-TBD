@@ -112,6 +112,9 @@ function test_getVariable_NotFound() {
   variableMapTest_tearDown();
 }
 
+
+/**************************TEST CASE 11******************************/
+
 function test_appendField_simple() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -125,6 +128,9 @@ function test_appendField_simple() {
   input.appendField(field1, 'first');
   assertEquals('appended', block, field1.sourceBlock_);
 }
+
+/**************************TEST CASE 12******************************/
+
 function test_appendField_string() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -138,6 +144,9 @@ function test_appendField_string() {
   input.appendField(labelText, 'name');
   assertEquals('string is appended', 'name', input.fieldRow[0].name);
 }
+
+/**************************TEST CASE 13******************************/
+
 function test_appendField_prefix() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -149,12 +158,13 @@ function test_appendField_prefix() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Tests
+  // Test
   input.appendField(field);
-  //assertEquals(2, input.fieldRow.length);
   assertEquals('appended', prefix, input.fieldRow[0]);
-  //assertEquals('appended', field, input.fieldRow[1]);
 }
+
+/**************************TEST CASE 14******************************/
+
 function test_appendField_suffix() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -169,4 +179,25 @@ function test_appendField_suffix() {
   // Test
   input.appendField(field);
   assertEquals('appended', suffix, input.fieldRow[1]);
+}
+
+/**************************TEST CASE 15******************************/
+
+function test_insertFieldAt_simple() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var before = new Blockly.FieldLabel('before');
+  var after = new Blockly.FieldLabel('after');
+  var between = new Blockly.FieldLabel('between');
+  input.appendField(before);
+  input.appendField(after);
+
+  // Preconditions
+  assertEquals(2, input.fieldRow.length);
+  assertEquals(before, input.fieldRow[0]);
+  assertEquals(after, input.fieldRow[1]);
+
+  // Test
+  assertEquals('inserted', before, input.fieldRow[0]);
 }
