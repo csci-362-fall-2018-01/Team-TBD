@@ -201,3 +201,31 @@ function test_insertFieldAt_simple() {
   // Test
   assertEquals('inserted', before, input.fieldRow[0]);
 }
+
+/**************************TEST CASE 24******************************/
+
+function testInit_Trivial() {
+  var workspace = new Blockly.Workspace();
+  var variable = new Blockly.VariableModel(workspace, 'TBD', 'string',
+    'TBD_id');
+
+  assertEquals('Is Correct Name','TBD', variable.name);
+  assertEquals('Is Correct Type','string', variable.type);
+  assertEquals('IS Correct ID','TBD_id', variable.id_);
+  
+  workspace.dispose();
+  variable = null;
+}
+
+/**************************TEST CASE 25******************************/
+
+function test_getVariable_ByNameAndType() {
+  variableMapTest_setUp();
+  var var_1 = variable_map.createVariable('CSCI362', 'string', 'TBD');
+  var result_1 = variable_map.getVariable('CSCI362', 'string');
+
+  // Searching by name + type is correct.
+  assertEquals('Variable is found',var_1, result_1);
+
+  variableMapTest_tearDown();
+}
