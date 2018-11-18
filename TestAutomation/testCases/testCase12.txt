@@ -1,0 +1,6 @@
+12
+Checks if a string is appended and returns a string
+Blockly's core
+appendField_string()
+input.fieldRow[0].name
+'string is appended'

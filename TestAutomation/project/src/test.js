@@ -112,6 +112,9 @@ function test_getVariable_NotFound() {
   variableMapTest_tearDown();
 }
 
+
+/**************************TEST CASE 11******************************/
+
 function test_appendField_simple() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -121,13 +124,13 @@ function test_appendField_simple() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Actual Tests
+  // Tests
   input.appendField(field1, 'first');
-  assertEquals(1, input.fieldRow.length);
-  assertEquals(field1, input.fieldRow[0]);
-  assertEquals('first', input.fieldRow[0].name);
-  assertEquals(block, field1.sourceBlock_);
+  assertEquals('appended', block, field1.sourceBlock_);
 }
+
+/**************************TEST CASE 12******************************/
+
 function test_appendField_string() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -137,10 +140,64 @@ function test_appendField_string() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Actual Tests
+  // Tests
   input.appendField(labelText, 'name');
-  assertEquals(1, input.fieldRow.length);
-  assertEquals(Blockly.FieldLabel, input.fieldRow[0].constructor);
-  assertEquals(labelText, input.fieldRow[0].getValue());
-  assertEquals('name', input.fieldRow[0].name);
+  assertEquals('string is appended', 'name', input.fieldRow[0].name);
+}
+
+/**************************TEST CASE 13******************************/
+
+function test_appendField_prefix() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var prefix = new Blockly.FieldLabel('prefix');
+  var field = new Blockly.FieldLabel('field');
+  field.prefixField = prefix;
+
+  // Preconditions
+  assertEquals(0, input.fieldRow.length);
+
+  // Test
+  input.appendField(field);
+  assertEquals('appended', prefix, input.fieldRow[0]);
+}
+
+/**************************TEST CASE 14******************************/
+
+function test_appendField_suffix() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var suffix = new Blockly.FieldLabel('suffix');
+  var field = new Blockly.FieldLabel('field');
+  field.suffixField = suffix;
+
+  // Preconditions
+  assertEquals(0, input.fieldRow.length);
+
+  // Test
+  input.appendField(field);
+  assertEquals('appended', suffix, input.fieldRow[1]);
+}
+
+/**************************TEST CASE 15******************************/
+
+function test_insertFieldAt_simple() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var before = new Blockly.FieldLabel('before');
+  var after = new Blockly.FieldLabel('after');
+  var between = new Blockly.FieldLabel('between');
+  input.appendField(before);
+  input.appendField(after);
+
+  // Preconditions
+  assertEquals(2, input.fieldRow.length);
+  assertEquals(before, input.fieldRow[0]);
+  assertEquals(after, input.fieldRow[1]);
+
+  // Test
+  assertEquals('inserted', before, input.fieldRow[0]);
 }

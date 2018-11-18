@@ -1,3 +1,6 @@
+
+/**************************TEST CASE 12******************************/
+
 function test_appendField_string() {
   var ws = new Blockly.Workspace();
   var block = new Blockly.Block(ws);
@@ -7,10 +10,7 @@ function test_appendField_string() {
   // Preconditions
   assertEquals(0, input.fieldRow.length);
 
-  // Actual Tests
+  // Tests
   input.appendField(labelText, 'name');
-  assertEquals(1, input.fieldRow.length);
-  assertEquals(Blockly.FieldLabel, input.fieldRow[0].constructor);
-  assertEquals(labelText, input.fieldRow[0].getValue());
-  assertEquals('name', input.fieldRow[0].name);
+  assertEquals('string is appended', 'name', input.fieldRow[0].name);
 }

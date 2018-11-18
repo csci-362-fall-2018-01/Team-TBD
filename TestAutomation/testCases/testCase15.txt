@@ -1,0 +1,6 @@
+15
+Inserts a field at the location of the input's field row and returns a string.
+Blockly's core
+insertFieldAt_simple()
+input.fieldRow[0]
+'inserted'

@@ -1,0 +1,6 @@
+13
+Checks if a string is appended to the beginning and returns a string.
+Blockly's core
+appendField_prefix()
+input.fieldRow[0]
+'appended'

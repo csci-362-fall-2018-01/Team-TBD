@@ -19,12 +19,15 @@ This project is designed to utilize a bash script called "runAllTest.sh" that wi
 - The following Google Libraries:
     - Blockly Library
         - git clone https://github.com/google/blockly.git
+        - Rename to <i>blockly-master</i>
     - Closure Library
         - git clone https://github.com/google/closure-library.git
-        - Rename to closure-library and place in same directory as blockly
+        - Rename to <i>closure-library</i> and place in same directory as blockly
 
 ## Test Case Formatting
-- Each test case file must follow a specific format which is outlined below
+
+- We have two folders that contain test case information used in our script. The text files in the testCases folder contain information on the test cases that is used in the table of the output. The javascript files in the testCaseExecutable folder contain the test cases that will be run. In order to add more tests, you need to add your test cases in both folders.
+- Each test case text file must follow a specific format which is outlined below:
 - Naming:
     - The name of the file must be testCase followed by a number
     - The extension of the file must be .txt
@@ -40,6 +43,17 @@ This project is designed to utilize a bash script called "runAllTest.sh" that wi
     - 1
     - Checks if name is valid and returns a string.
     - Blockly's core
-    - safeName
+    - safeName()
     - 'fooBar'
     - 'Is Safe Name'
+- Each test case javascript file must follow a specific format which is outlined below:
+- Naming:
+    - The name of the file must be testCase followed by a number
+    - The extension of the file must be .js
+    - Full file example: testCase01.js
+- Example Test file (testCase01.js)
+<br><code>////////////////////TEST CASE 1/////////////////////</code><br>
+<code>function test_safeName () {</code><br>
+<code>var varDB = new Blockly.Names('window,door');</code><br>
+<code>assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));</code><br>
+<code>}</code>
