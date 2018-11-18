@@ -2,5 +2,5 @@
 Checks if variable's can be found by searching and returns a string.
 Blockly's core
 getVariable_ByNameAndType()
-'CSCI362','string','TBD-id'
+var_1, result_1
 'Variable is found.'

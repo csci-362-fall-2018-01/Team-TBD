@@ -1,6 +1,6 @@
 24
 Checks if variable's name, type, id are correct as defined and returns three strings.
 Blockly's core
-VariableModel()
-'TBD', 'string','TBD-id'
+Init_Trivial()
+'TBD', 'string','TBD_id'
 'Is Correct Name', 'Is Correct Type', 'Is Correct ID'
