@@ -1,0 +1,6 @@
+16
+Checks if element is added to class and returns a string.
+Blockly's core
+addClass()
+'one'
+'Added "one"'

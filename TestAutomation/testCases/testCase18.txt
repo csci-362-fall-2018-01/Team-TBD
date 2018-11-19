@@ -1,0 +1,6 @@
+18
+Checks if Radians has successfully been converted to Degrees and returns a string.
+Blockly's core
+toDegrees()
+'5 * Math.PI / 2'
+'450'

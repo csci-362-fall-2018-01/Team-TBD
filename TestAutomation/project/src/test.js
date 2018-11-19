@@ -202,6 +202,78 @@ function test_insertFieldAt_simple() {
   assertEquals('inserted', before, input.fieldRow[0]);
 }
 
+/**************************TEST CASE 16******************************/
+
+function test_addClass() 
+{
+	var p = document.createElement('p');
+  	Blockly.utils.addClass(p, 'one');
+	assertEquals('Added "one"', 'one', p.className);
+}
+
+/**************************TEST CASE 17******************************/
+
+function test_hasClass() 
+{
+   	var p = document.createElement('p');
+	p.className = ' one three  two three  ';
+	assertTrue('Has "three"', Blockly.utils.hasClass(p, 'three'));
+}
+
+/**************************TEST CASE 18******************************/
+
+function test_toDegrees() 
+{
+  	var quarter = Math.PI / 2;
+	assertEquals('450', 360 + 90, Blockly.utils.toDegrees(5 * quarter));
+}
+
+/**************************TEST CASE 19******************************/
+
+
+function test_insertFieldAt_string() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var before = new Blockly.FieldLabel('before');
+  var after = new Blockly.FieldLabel('after');
+  var labelText = 'label';
+  input.appendField(before);
+  input.appendField(after);
+
+  // Preconditions
+  assertEquals(2, input.fieldRow.length);
+  assertEquals(before, input.fieldRow[0]);
+  assertEquals(after, input.fieldRow[1]);
+
+  // Test
+  assertEquals('inserted', before, input.fieldRow[0]);
+}
+
+/**************************TEST CASE 20******************************/
+
+
+function test_insertFieldAt_prefix() {
+  var ws = new Blockly.Workspace();
+  var block = new Blockly.Block(ws);
+  var input = new Blockly.Input(Blockly.DUMMY_INPUT, 'INPUT', block);
+  var before = new Blockly.FieldLabel('before');
+  var after = new Blockly.FieldLabel('after');
+  var prefix = new Blockly.FieldLabel('prefix');
+  var between = new Blockly.FieldLabel('between');
+  between.prefixField = prefix;
+  input.appendField(before);
+  input.appendField(after);
+
+  // Preconditions
+  assertEquals(2, input.fieldRow.length);
+  assertEquals(before, input.fieldRow[0]);
+  assertEquals(after, input.fieldRow[1]);
+ 
+  // Test
+  assertEquals('inserted', before, input.fieldRow[0]);
+}
+
 /**************************TEST CASE 24******************************/
 
 function testInit_Trivial() {

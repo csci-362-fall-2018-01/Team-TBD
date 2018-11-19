@@ -1,0 +1,6 @@
+17
+Checks if element is within a class and returns a string.
+Blockly's core
+hasClass()
+'three'
+'Has "three"'
