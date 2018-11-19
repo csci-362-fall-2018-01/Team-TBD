@@ -1,0 +1,6 @@
+22
+Checks if a variable's type is undefined and returns a string.
+Blockly's core
+Init_UndefinedType()
+'', variable.type
+'Undefined Type'

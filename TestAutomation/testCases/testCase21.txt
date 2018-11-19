@@ -1,0 +1,6 @@
+21
+Checks if a variable's type is null and returns a string.
+Blockly's core
+Init_NullType()
+'', variable.type
+'Null Type'

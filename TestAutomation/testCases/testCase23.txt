@@ -1,0 +1,6 @@
+23
+Checks if ID is null and returns a string.
+Blockly's Core
+Init_NullId()
+variable.id_
+'Not Null'

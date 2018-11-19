@@ -1,8 +1,8 @@
 /**
  * testAutomation/project/src/index.js
  * created: 30-Oct-2018
- * updated: 14-Nov-2018
- * version: 0.0.6
+ * updated: 19-Nov-2018
+ * version: 0.0.7
  */
 
 'use strict'
@@ -13,6 +13,7 @@ goog.require('goog.testing.MockControl');
 var variable_map;
 var mockControl_;
 var workspace;
+var variable;
 
 function variableMapTest_setUp() {
   workspace = new Blockly.Workspace();
@@ -36,4 +37,13 @@ function workspaceTest_tearDown() {
   undefineGetVarBlock();
   mockControl_.$tearDown();
   workspace.dispose();
+}
+
+function variableModelTest_setUp() {
+  workspace = new Blockly.Workspace();
+}
+
+function variableModelTest_tearDown() {
+  workspace.dispose();
+  variable = null;
 }
