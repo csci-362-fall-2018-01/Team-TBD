@@ -48,86 +48,83 @@ function variableModelTest_tearDown() {
   variable = null;
 }
 
-/**************************TEST CASE 1*****************************
+/**************************TEST CASE 1******************************/
 
 function test_safeName () {
 	var varDB = new Blockly.Names('window,door');
 	assertEquals('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));
 }
-*/
 
-/**************************FAULT INJECTION 1******************************/
+/**************************FAULT INJECTION 1*****************************
 
 function test_safeName_ () {
 	var varDB = new Blockly.Names('window;door');
 	assertNull('Is Safe Name', 'fooBar', varDB.safeName_('fooBar'));
 }
+*/
 
-/**************************TEST CASE 2*****************************
+/**************************TEST CASE 2******************************/
 
 function test_commonWordSuffix() {
   var len = Blockly.utils.commonWordSuffix('Xabc de,Yabc de'.split(','));
   assertEquals('One word', 3, len);
 }
-*/
 
-/**************************FAULT INJECTION 2******************************/
+/**************************FAULT INJECTION 2*****************************
 
 function test_CommonWordSuffix() {
   var len = Blockly.utils.commonWordSuffix('Xabc de,Yabc de'.split('.'));
   assertEquals('One word', 3, len);
 }
+*/
 
-/**************************TEST CASE 3*****************************
+/**************************TEST CASE 3******************************/
 
 function test_getName() {
   var varDB = new Blockly.Names('window,door');
   assertEquals('Name add #1.', 'Foo_bar', varDB.getName('Foo.bar', 'var'));
   assertEquals('Name get #1.', 'Foo_bar', varDB.getName('Foo.bar', 'var'));
 }
-*/
 
-/**************************FAULT INJECTION 3******************************/
+
+/**************************FAULT INJECTION 3*****************************
 
 function test_GETNAME() {
   var varDB = new Blockly.Names('window,door');
   assertEquals('Name add #1.', 'Foo_bar', varDB.getName('Foo.bar', 'var'));
   assertNotEquals('Name get #1.', 'Foo_bar', varDB.getName('Foo.bar', 'var'));
 }
+*/
 
-
-
-/**************************TEST CASE 4*****************************
+/**************************TEST CASE 4******************************/
 
 function test_getDistinctName() {
   var varDB = new Blockly.Names('window,door');
   assertEquals('Name distinct #1.', 'Foo_bar',
                varDB.getDistinctName('Foo.bar', 'var'));
 }
-*/
 
-/**************************FAULT INJECTION 4******************************/
+/**************************FAULT INJECTION 4*****************************
 
 function test_getDistinctName() {
   var varDB = new Blockly.Names('window,door');
   assertNotEquals('Name distinct #1.', 'Foo_bar',
                varDB.getDistinctName('Foo.bar', 'var'));
 }
+*/
 
-
-/**************************TEST CASE 5*****************************
+/**************************TEST CASE 5******************************/
 
 function test_nameEquals() {
   assertTrue('Names equal.', Blockly.Names.equals('Foo.bar', 'Foo.bar'));
 }
-*/
 
-/**************************FAULT INJECTION 5******************************/
+/**************************FAULT INJECTION 5*****************************
 
 function testnameEquals() {
   assertTrue('Names equal.', Blockly,Names.equals('Foo.bar', 'Foo.bar'));
 }
-
+*/
 
 /**************************TEST CASE 6******************************/
 
